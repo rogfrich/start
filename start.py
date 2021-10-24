@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import List
 from directories import directories
 from environment import setup_environment_or_skip
+from vcs import setup_vcs_or_skip
 
 print(Path.cwd())
 
@@ -21,7 +22,7 @@ def main():
 
 
     # Set up git
-    ...
+    setup_vcs_or_skip(full_project_path)
 
 def create_full_project_path(parent_project_folder, project_dir_name):
     """
