@@ -2,8 +2,8 @@ import sys
 import os
 from pathlib import Path
 from typing import List
-
-STANDARD_CODE_DIR = Path('/Users/rich/code')
+from directories import directories
+from environment import setup_environment_or_skip
 
 print(Path.cwd())
 
@@ -12,12 +12,13 @@ def main():
 
     # Basic setup of the new project directory
     project_dir_name: str = get_new_dir_name_from_args(sys.argv)
-    parent_project_folder: Path = set_project_parent_folder(STANDARD_CODE_DIR)
+    parent_project_folder: Path = set_project_parent_folder(directories["STANDARD_CODE_DIR"])
     full_project_path: Path = create_full_project_path(parent_project_folder, project_dir_name)
     create_project_folder(full_project_path)
 
     # Set up Python virtual environment
-    ...
+    setup_environment_or_skip(full_project_path)
+
 
     # Set up git
     ...
