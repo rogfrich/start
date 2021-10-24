@@ -5,7 +5,8 @@ A script to scaffold new projects quickly and easily.
 `start <project name>` to create a new project. This will:
 - Create a directory called `<project name>`. Since most new projects will be in the `~/code` directory, 
   the script will prompt for confirmation if it is run from any other directory. If this happens, press `y` 
-  to continue in the CWD, or any other key to create the new directory in `~/code`.
+  to continue in the directory from which it was called, or any other key to create the new directory in 
+  `~/code` regardless of where it was called from.
 - Create a README.md file with the project directory name as the header.
 - Ask whether to set up a Python virtual environment (see below).
 - Ask whether to set up git (see below).
