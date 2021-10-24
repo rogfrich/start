@@ -2,8 +2,10 @@
 A script to scaffold new projects quickly and easily.
 
 ## Usage
-`start <project name>` to create a new project. This will:
-- Create a directory called `<project name>`. Since most new projects will be in the `~/code` directory, 
+`start <project name>` to create a new project. `start` is a Bash script which invokes `~/code/start/start.py`. This 
+Python script will:
+- Create a directory called `<project name>`. 
+  - Since most new projects will be in the `~/code` directory, 
   the script will prompt for confirmation if it is run from any other directory. If this happens, press `y` 
   to continue in the directory from which it was called, or any other key to create the new directory in 
   `~/code` regardless of where it was called from.
