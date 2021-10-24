@@ -12,7 +12,7 @@ A script to scaffold new projects quickly and easily.
 
 ## Python virtual environments
 If the option to set up a virtual environment is selected, then the script will:
-- Copy the template `requirements.txt` and `requirements-dev.txt` from `~/start_tempates` to the new 
+- Copy the template `requirements.txt` and `requirements-dev.txt` from `~/start_templates` to the new 
   project directory. These files specify Python libraries that I'm likely to want:
   - pytest
   - black
