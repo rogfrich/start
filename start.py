@@ -17,6 +17,12 @@ def main():
     full_project_path: Path = create_full_project_path(parent_project_folder, project_dir_name)
     create_project_folder(full_project_path)
 
+
+    # Create README.md
+    with open(f"{full_project_path}/README.md", "w") as fout:
+        fout.write(f"# {project_dir_name}\n")
+
+
     # Set up Python virtual environment
     setup_environment_or_skip(full_project_path)
 
